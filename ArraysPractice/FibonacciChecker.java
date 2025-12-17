@@ -1,6 +1,6 @@
 
 
-public class Fibonacci{
+public class FibonacciChecker{
     
     
     
