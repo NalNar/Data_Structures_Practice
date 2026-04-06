@@ -13,6 +13,16 @@ public class GraphList {
     public GraphList(){
         aList = new ArrayList<>();
     }
+
+    public int size(){
+        return aList.size();
+    }
+
+    public LinkedList<Node> get(int index){
+        return aList.get(index);
+    }
+
+
     public void addNode(Node node){
         // when we create add node we create new linked list with node as the head
         LinkedList<Node> current = new LinkedList<>();
@@ -31,8 +41,8 @@ public class GraphList {
         LinkedList<Node> currList = aList.get(src); // this would return linked list
         Node dstNode = aList.get(dst).get(0); // get 0 is the head of LL
         // finding a match
-        for(Node node; currList){
-            if(node==dstNode){
+        for(Node node : currList){
+            if(node == dstNode){
                 return true;
             }
         }
